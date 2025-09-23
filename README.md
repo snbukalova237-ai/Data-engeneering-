@@ -34,5 +34,14 @@ This dataset contains comprehensive records of all property sales in New York Ci
 | **Modeling** | Advanced prediction algorithms |
 | **Visualization** | Interactive dashboards |
 
-## 🏗️ Dataset Structure
-Ссылка на датасет ([https://drive.google.com/drive/folders/1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6?usp=sharing])
+## ⚠️ Important Notes
+- Includes deed transfers ($0 sales)
+- Covers both entire buildings and individual units
+- Based on NYC Department of Finance data
+
+## 🔗 Data Set Link
+[https://drive.google.com/drive/folders/1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6?usp=sharing]
+
+## Raw_data.head(10) results
+<img width="1477" height="744" alt="image" src="https://github.com/user-attachments/assets/86e9db87-8173-406a-af28-6cfac7b6a8ba" />
+
