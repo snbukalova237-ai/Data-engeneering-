@@ -45,8 +45,10 @@ This dataset contains comprehensive records of all property sales in New York Ci
 
 ## Task 3: 
 **before**
-<img width="725" height="832" alt="image" src="https://github.com/user-attachments/assets/c7dc825e-d3d0-4358-806d-b4377e018e47" />
+<img width="1028" height="617" alt="image" src="https://github.com/user-attachments/assets/839415a3-8e2b-4098-919b-8833466a44e1" />
+
 **after**
-<img width="793" height="805" alt="image" src="https://github.com/user-attachments/assets/de0d237b-f218-471b-ab52-e99c7116d8ab" />
+<img width="623" height="596" alt="image" src="https://github.com/user-attachments/assets/2483998c-e5ad-45c9-8ba1-84b8580d173c" />
+
 
 
