@@ -23,79 +23,26 @@ Includes a complete **ETL pipeline**, **data parsing**, and **EDA** in Python.
 ## Structure
 
 NYC-Property-Sales/
-├── api_example/ # API integration examples
-│ ├── api_reader.py
-│ └── README.md
-├── etl/ # ETL package
-│ ├── extract.py
-│ ├── transform.py
-│ ├── load.py
-│ └── main.py
-├── parse_example/ # Data parsing
-│ ├── data_parser.py
-│ └── README.md
-├── notebook/ # Jupyter notebooks
-│ └── EDA.ipynb
-├── src/ # Data loader module
-│ └── data_loader.py
-├── pyproject.toml
-├── requirments.txt
-└── README.md
+├── api_example/           # API integration examples
+│   ├── api_reader.py
+│   └── README.md
+├── etl/                   # ETL pipeline
+│   ├── init.py
+│   ├── extract.py         # Extract data from sources
+│   ├── transform.py       # Data cleaning and transformation
+│   ├── load.py            # Load data to DB and Parquet
+│   └── main.py            # ETL entry point
+├── parse_example/         # Data parsing examples
+│   ├── data_parser.py
+│   └── README.md
+├── notebook/              # Jupyter notebooks for analysis
+│   ├── EDA.ipynb
+│   └── README.md
+├── src/                   # Project modules
+│   ├── data_loader.py
+│   └── README.md
+├── pyproject.toml          # Project configuration (Poetry)
+├── requirments.txt         # Python dependencies
+└── README.md               # Project documentation
 
 
----
-
-## Installation
-
-```bash
-conda create -n nyc_sales python=3.13 pip
-conda activate nyc_sales
-pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy psycopg2-binary pyarrow
-
-## ETL Pipeline
-# Run full pipeline
-python -m etl.main run --file-id 1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6
-
-# Extract / Transform / Load separately
-python -m etl.main extract --file-id ...
-python -m etl.main transform --input data/raw/nyc_sales.csv
-python -m etl.main load --input data/processed/nyc_sales_clean.csv --table nyc_property_sales
-
-Stages:
-
-Extract: Download dataset → /data/raw/
-
-Transform: Clean and normalize data
-
-Load: Save to Parquet + load ≤100 rows into PostgreSQL
-
-## EDA
-
-Run interactive notebook:
-jupyter notebook notebook/EDA.ipynb
-
-**Includes:**
-- Sales trends by borough
-- Price distributions
-- Correlation and anomaly detection
-
----
-
-## Applications
-- Real estate market & valuation analysis
-- Price prediction models
-- Spatial and time-series analysis
-
----
-
-## Main Libraries
-`pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`,  
-`sqlalchemy`, `psycopg2-binary`, `pyarrow`, `jupyterlab`, `gdown`
-
-## Example Output
-
-[INFO] Starting ETL pipeline...
-[INFO] Data downloaded: data/raw/nyc_sales.csv
-[INFO] Data transformed successfully
-[INFO] 100 rows loaded into PostgreSQL table: nyc_property_sales
-[INFO] Data exported to parquet: data/processed/nyc_sales_clean.parquet
