@@ -65,12 +65,6 @@ pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy p
 python -m etl.main run --file-id 1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6
 ```
 
-# Extract / Transform / Load separately
-```
-python -m etl.main extract --file-id ...
-python -m etl.main transform --input data/raw/nyc_sales.csv
-python -m etl.main load --input data/processed/nyc_sales_clean.csv --table nyc_property_sales
-```
 Loading into a DB table (max 100 rows):
 ```
 python -m main --db_name homework --table_name bukalova
