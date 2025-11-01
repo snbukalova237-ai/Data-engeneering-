@@ -79,7 +79,7 @@ etl/                         # ETL pipeline
 
 Loading into a DB table (100 rows):
 ```
-python -m main --db_name homework --table_name bukalova
+python -m main --db_name homework --table_name bukalova       # --db_name - homeworks or freezone
 ```
 
 Pipeline stages
