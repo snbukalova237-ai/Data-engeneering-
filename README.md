@@ -61,7 +61,6 @@ pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy p
 
 ## ETL Pipeline
 
-## 🔄 ETL Pipeline
 ```
 etl/                         # ETL pipeline
 ├── __init__.py              # package metadata
