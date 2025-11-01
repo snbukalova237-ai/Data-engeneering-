@@ -61,7 +61,7 @@ pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy p
 
 ## ETL Pipeline
 
-Loading into a DB table (max 100 rows):
+Loading into a DB table (100 rows):
 ```
 python -m main --db_name homework --table_name bukalova
 ```
