@@ -61,13 +61,16 @@ pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy p
 
 ## ETL Pipeline
 # Run full pipeline
+```
 python -m etl.main run --file-id 1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6
+```
 
 # Extract / Transform / Load separately
+```
 python -m etl.main extract --file-id ...
 python -m etl.main transform --input data/raw/nyc_sales.csv
 python -m etl.main load --input data/processed/nyc_sales_clean.csv --table nyc_property_sales
-
+```
 Stages:
 
 Extract: Download dataset → /data/raw/
@@ -79,7 +82,9 @@ Load: Save to Parquet + load ≤100 rows into PostgreSQL
 ## EDA
 
 Run interactive notebook:
+```
 jupyter notebook notebook/EDA.ipynb
+```
 
 **Includes:**
 - Sales trends by borough
