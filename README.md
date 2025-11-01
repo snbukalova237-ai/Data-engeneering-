@@ -22,6 +22,7 @@ Includes a complete **ETL pipeline**, **data parsing**, and **EDA** in Python.
 
 ## Structure
 
+```
 NYC-Property-Sales/
 ├── api_example/                 # API integration examples
 │   ├── api_reader.py
@@ -44,4 +45,4 @@ NYC-Property-Sales/
 ├── pyproject.toml               # Project configuration (Poetry)
 ├── requirements.txt             # Python dependencies
 └── README.md                    # Project documentation
-
+```
