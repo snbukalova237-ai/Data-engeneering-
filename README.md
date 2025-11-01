@@ -23,26 +23,25 @@ Includes a complete **ETL pipeline**, **data parsing**, and **EDA** in Python.
 ## Structure
 
 NYC-Property-Sales/
-├── api_example/           # API integration examples
+├── api_example/                 # API integration examples
 │   ├── api_reader.py
 │   └── README.md
-├── etl/                   # ETL pipeline
-│   ├── init.py
-│   ├── extract.py         # Extract data from sources
-│   ├── transform.py       # Data cleaning and transformation
-│   ├── load.py            # Load data to DB and Parquet
-│   └── main.py            # ETL entry point
-├── parse_example/         # Data parsing examples
+├── etl/                         # ETL pipeline
+│   ├── __init__.py
+│   ├── extract.py               # Extract data from sources
+│   ├── transform.py             # Data cleaning and transformation
+│   ├── load.py                  # Load data to DB and Parquet
+│   └── main.py                  # ETL entry point
+├── parse_example/               # Data parsing examples
 │   ├── data_parser.py
 │   └── README.md
-├── notebook/              # Jupyter notebooks for analysis
+├── notebook/                    # Jupyter notebooks for analysis
 │   ├── EDA.ipynb
 │   └── README.md
-├── src/                   # Project modules
+├── src/                         # Project modules
 │   ├── data_loader.py
 │   └── README.md
-├── pyproject.toml          # Project configuration (Poetry)
-├── requirments.txt         # Python dependencies
-└── README.md               # Project documentation
-
+├── pyproject.toml               # Project configuration (Poetry)
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project documentation
 
