@@ -87,13 +87,13 @@ Loading into a DB table (100 rows):
 python -m main --db_name homework --table_name bukalova
 ```
 
-Stages:
+Pipeline stages
 
-Extract: Download dataset → /data/raw/
+Extract: Reads the raw source and saves data/raw/nyc_sales.csv
 
-Transform: Clean and normalize data
+Transform: Casts schema (dtypes, dates), cleans and normalizes data
 
-Load: Save to Parquet + load ≤100 rows into PostgreSQL
+Load: Writes data/processed/nyc_sales_clean.parquet and optionally inserts up to 100 rows into the specified database table
 
 ## EDA
 
