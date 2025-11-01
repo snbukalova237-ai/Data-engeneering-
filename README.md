@@ -46,3 +46,56 @@ NYC-Property-Sales/
 ├── requirements.txt             # Python dependencies
 └── README.md                    # Project documentation
 ```
+
+---
+
+## Installation
+
+```bash
+conda create -n nyc_sales python=3.13 pip
+conda activate nyc_sales
+pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy psycopg2-binary pyarrow
+```
+
+---
+
+## ETL Pipeline
+# Run full pipeline
+python -m etl.main run --file-id 1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6
+
+# Extract / Transform / Load separately
+python -m etl.main extract --file-id ...
+python -m etl.main transform --input data/raw/nyc_sales.csv
+python -m etl.main load --input data/processed/nyc_sales_clean.csv --table nyc_property_sales
+
+Stages:
+
+Extract: Download dataset → /data/raw/
+
+Transform: Clean and normalize data
+
+Load: Save to Parquet + load ≤100 rows into PostgreSQL
+
+## EDA
+
+Run interactive notebook:
+jupyter notebook notebook/EDA.ipynb
+
+**Includes:**
+- Sales trends by borough
+- Price distributions
+- Correlation and anomaly detection
+
+---
+
+## Applications
+- Real estate market & valuation analysis
+- Price prediction models
+- Spatial and time-series analysis
+
+---
+
+## Main Libraries
+`pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`,  
+`sqlalchemy`, `psycopg2-binary`, `pyarrow`, `jupyterlab`, `gdown`
+
