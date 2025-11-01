@@ -60,7 +60,7 @@ pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy p
 ---
 
 ## ETL Pipeline
-# Run full pipeline
+Run full pipeline
 ```
 python -m etl.main run --file-id 1NhSdry2LAagL66Vec8ckH4ypVeg3Iwp6
 ```
