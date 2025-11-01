@@ -77,10 +77,6 @@ etl/                         # ETL pipeline
 
 ### Run the pipeline
 
-**Minimal run (no DB load):**
-```bash
-python -m main --db_name homework --table_name bukalova --no-db
-```
 Loading into a DB table (100 rows):
 ```
 python -m main --db_name homework --table_name bukalova
