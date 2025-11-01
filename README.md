@@ -61,6 +61,27 @@ pip install pandas numpy matplotlib seaborn plotly jupyterlab gdown sqlalchemy p
 
 ## ETL Pipeline
 
+## 🔄 ETL Pipeline
+```
+etl/                         # ETL pipeline
+├── __init__.py              # package metadata
+├── extract.py                # Extract data from sources (CSV/Parquet/Google Drive)
+├── transform.py              # Data cleaning and type normalization
+├── load.py                   # Save data to Parquet and load <=100 rows into DB
+└── main.py                   # CLI orchestrator
+```
+
+**Data directories:**  
+`data/raw/` and `data/processed/` are created at runtime.  
+
+---
+
+### Run the pipeline
+
+**Minimal run (no DB load):**
+```bash
+python -m main --db_name homework --table_name bukalova --no-db
+```
 Loading into a DB table (100 rows):
 ```
 python -m main --db_name homework --table_name bukalova
